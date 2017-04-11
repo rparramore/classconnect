@@ -44,13 +44,13 @@
                         
                   <center>  <div class="input-group">
                         <label><b><font color="white" size="5">Username</font></b></label>
-                        <input type="text" placeholder="Enter Username" name="uname" required>
+                        <input id="username" type="text" placeholder="Enter Username" name="uname" required>
                         <label><b><font color="white" size="5">Password</font></b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" required style="width: 800px">
+                        <input id="password" type="password" placeholder="Enter Password" name="psw" required style="width: 800px">
                         
                     </div> </center>
 				<br />
-			     <button type="button" class="btn btn-primary" onclick="whatsup()">Login</button>
+			     <button type="button"  class="btn btn-primary" onclick="login()">Login</button>
 				 <br />
 				 <br />
 			     <button type="button" class="btn btn-primary"><a href="register.html"><font color="white">Create Account</font></button>
@@ -59,8 +59,21 @@
 		
 </html>
 
-<script>
-	function whatsup(){
-		console.log("hello world");
+<script type="text/javascript">
+	function login(){
+		alert('return sent');
+		$.ajax({
+			type: "POST",
+			url: "",
+			datatype: "JSON",
+			data: {
+				action : "login",
+				username : $("#username").val(),
+				password : $("password").val()
+			},
+			success: function(response){
+				location = "index.html";
+			}
+		});
 	}
 </script>
