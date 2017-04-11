@@ -935,10 +935,7 @@
 		top: 0;
 	}
 
-		body.landing #header nav a {
-			color: rgba(255, 255, 255, 0.5);
-		}
-
+		
 	#header {
 		background-color: #383b43;
 		color: #ffffff;
@@ -964,58 +961,7 @@
 				font-size: 1.25em;
 			}
 
-		#header nav {
-			height: inherit;
-			line-height: inherit;
-			position: absolute;
-			right: 3em;
-			vertical-align: middle;
-		}
-
-			#header nav > ul {
-				list-style: none;
-				margin: 0;
-				padding-left: 0;
-			}
-
-				#header nav > ul > li {
-					border-radius: 4px;
-					display: inline-block;
-					margin-left: 2em;
-					padding-left: 0;
-				}
-
-					#header nav > ul > li a {
-						-moz-transition: color 0.2s ease-in-out;
-						-webkit-transition: color 0.2s ease-in-out;
-						-o-transition: color 0.2s ease-in-out;
-						-ms-transition: color 0.2s ease-in-out;
-						transition: color 0.2s ease-in-out;
-						color: #cdced0;
-						display: inline-block;
-						text-decoration: none;
-					}
-
-						#header nav > ul > li a:active, #header nav > ul > li a:hover {
-							color: #ffffff;
-						}
-
-					#header nav > ul > li:first-child {
-						margin-left: 0;
-					}
-
-					#header nav > ul > li .button {
-						background-color: #fff;
-						color: #444 !important;
-						height: 2.25em;
-						line-height: 2.25em;
-						margin-bottom: 0;
-						padding: 0 1em;
-						position: relative;
-						top: -0.075em;
-						vertical-align: middle;
-					}
-
+		
 		#header .container {
 			position: relative;
 		}
@@ -1024,18 +970,16 @@
 				left: 0;
 			}
 
-			#header .container nav {
-				right: 0;
-			}
+		
 
 /* Banner */
 
 	#banner {
-		background-image: url(../images/dark_tint.png), url(../images/bokeh_car_lights_bg.jpg);
+		background-image: url(../images/dark_tint.png), url(../images/ucf.jpg);
 		background-position: center center;
 		background-size: cover;
 		color: #ffffff;
-		padding: 14em 0em 14em;
+		padding: 8em 0em 14em;
 		text-align: center;
 	}
 
@@ -1216,4 +1160,20 @@
 
 		.grid-demo .row.flush > div:last-child span {
 			border-radius: 0 4px 4px 0;
+		}
+
+		input::-webkit-input-placeholder {
+			color: white !important;
+		}
+		
+		input:-moz-placeholder { /* Firefox 18- */
+			color: white !important;  
+		}
+		
+		input::-moz-placeholder {  /* Firefox 19+ */
+			color: white !important;  
+		}
+		
+		input:-ms-input-placeholder {  
+			color: white!important;  
 		}
